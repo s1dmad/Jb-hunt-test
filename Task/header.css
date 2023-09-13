@@ -1,148 +1,3 @@
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
-
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-    display: block;
-}
-
-body {
-    line-height: 1;
-}
-
-ol,
-ul {
-    list-style: none;
-}
-
-blockquote,
-q {
-    quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-    content: '';
-    content: none;
-}
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-/* Reset default margins and paddings */
-body,
-ul {
-    margin: 0;
-    padding: 0;
-}
-
-/* Global styles */
-body {
-    width: 100vw;
-    font-family: 'Proxima Nova', sans-serif;
-}
-
-/* Header styles */
 .header {
     font-family: 'Proxima Nova', sans-serif;
     font-size: 14px;
@@ -179,22 +34,26 @@ body {
     list-style: none;
     display: flex;
     justify-content: space-between;
-    width: 440px;
+    width: 443px;
 }
-.navbar-top-left,.navbar-top-right{
+
+.navbar-top-left,
+.navbar-top-right {
     display: flex;
     align-items: center;
-}   
+}
+
 .navigation__link.active {
-    background-color: #005dba;
+    background: linear-gradient(135deg, #4852a8, #4852a8);
     color: #fff;
-    padding: 20px 15px;
+    padding: 22px 15px;
 
 }
 
 .navigation__link {
     text-decoration: none;
     color: #000;
+    display: flex;
 }
 
 .info-icon {
@@ -212,6 +71,10 @@ body {
 .user__icon {
     font-size: 14px;
     margin-right: 8px;
+}
+
+.user__text {
+    cursor: pointer;
 }
 
 .user:hover {
@@ -235,7 +98,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 5px;
+    height: 6px;
     background-color: #005dba;
 }
 
@@ -252,11 +115,11 @@ body {
 }
 
 .modal-content {
-    background-color: #005dba;
+    background: linear-gradient(135deg, #4852a8, #005dba);
     /* Change the background color */
     padding: 20px;
-    width: 325px;
-    height: 350px;
+    width: 350px;
+    height: 375px;
     position: relative;
     color: #fff;
     /* Set text color to white */
@@ -270,7 +133,6 @@ body {
     display: flex;
     font-size: 16px;
     align-items: center;
-    /* margin-bottom: 40px; */
     padding: 30px 14px;
 }
 
@@ -284,40 +146,74 @@ body {
 .search-input {
     border: none;
     flex: 1;
-    padding: 15px;
+    padding: 19px;
+    outline: none;
+}
+
+.search-input::placeholder {
+    font-size: 16px;
+    font-family: proxima-nova, sans-serif;
+    font-weight: 400;
+    letter-spacing: .5px;
+    color: rgba(0, 0, 0, .5);
 }
 
 .search-button {
     background-color: #fedb00;
     border: none;
     cursor: pointer;
-    padding: 14px;
+    /* padding: 18px; */
     font-size: 15px;
 }
 
 .dropdown {
     border: 2px solid #000;
     padding: 15px;
-    width: 100%;
     margin-bottom: 17px;
+    outline: none;
+    position: relative;
+    background: #fff;
+    /* cursor: pointer; */
 }
+
+.custom-dropdown {
+    appearance: none;
+    outline: none;
+    border: none;
+}
+
+.custom-arrow {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%) rotate(180deg);
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #000;
+    cursor: default;
+}
+
 
 /* Style the navigation bar */
 .navbar {
     display: flex;
     height: auto;
-    width: calc(100% - 26px);
+    width: 100%;
     flex-direction: column;
     background-image: linear-gradient(135deg, #4852a8, #005dba);
     justify-content: flex-start;
     padding: 5px 13px;
-    position: relative;
+    /* position: relative; */
+    position: absolute;
+    z-index: 90;
 }
 
 
 /* Style the logo */
 .logo img {
-    width: 120px;
+    width: 124px;
     height: auto;
 }
 
@@ -326,7 +222,7 @@ body {
     display: flex;
     color: #fff;
     align-items: center;
-    margin-left: 20px;
+    margin-left: 16px;
     gap: 20px;
 }
 
@@ -335,12 +231,12 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
+    padding: 18px 40px;
     width: calc(100% - 80px);
 }
 
 .nav-link {
-    color: #fff;
+    color: #f2f4f6;
     font-weight: 500;
     text-transform: uppercase;
     cursor: pointer;
@@ -357,25 +253,37 @@ body {
 .search {
     display: flex;
     align-items: center;
-    margin-left: 20px;
+    margin-right: 50px;
+    cursor: pointer;
 }
 
 .search-text {
     font-size: 15px;
-    font-weight: 400;
-    color: #fff;
+    font-weight: 300;
+    color: #f2f4f6;
 }
 
 .search i {
-    font-size: 20px;
+    font-size: 19px;
     margin-right: 17px;
+    color: #f2f4f6;
+}
+
+.search-placeholder-container {
+    width: 100%;
+    margin: 18px 0 22px -40px;
+}
+
+.search-placeholder-container-inner {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
 }
 
 .search-placeholder {
     border: 2px solid #000;
     background-color: #fff;
     width: 512px;
-    margin: 14px 0 40px 822px;
 }
 
 .search-placeholder-content {
@@ -407,9 +315,10 @@ body {
     border: none;
     background: none;
     color: #fff;
-    font-size: 30px;
+    font-size: 25px;
     position: absolute;
     right: 10px;
+    top: 25px;
     cursor: pointer;
 }
 
@@ -431,15 +340,18 @@ body {
     width: calc(100% / 4);
     padding: 0 16px;
 }
-.drawer-div-img-container{
+
+.drawer-div-img-container {
     width: 100%;
     height: auto;
     margin-bottom: 20px;
 }
-.drawer-div-img-container img{
+
+.drawer-div-img-container img {
     width: 100%;
     height: auto;
 }
+
 .drawer-div p {
     margin-bottom: 40px;
     font-size: 1rem;
@@ -505,6 +417,7 @@ body {
     font-size: 14px;
     color: #fff;
     margin-right: 5px;
+    font-weight: 600;
 }
 
 .nav-link-placeholder {
@@ -533,19 +446,25 @@ body {
         margin: 0;
         justify-content: center;
         padding: 0;
-        .user,.signup-button {
+
+        .user,
+        .signup-button {
             display: none;
         }
     }
-    .dropdown-arrow-icon{
-        display: block!important;
+
+    .dropdown-arrow-icon {
+        display: block !important;
     }
+
     .header__left {
         width: 100%;
     }
-    .hamburger{
+
+    .hamburger {
         display: flex;
     }
+
     .navigation {
         width: 100%;
     }
@@ -553,6 +472,7 @@ body {
     .navigation__list {
         width: 100%;
         justify-content: space-around;
+        padding: 0 5px ;
     }
 
     .navigation__item i {
@@ -571,6 +491,11 @@ body {
     .navigation__link {
         flex: auto;
         text-align: center;
+        font-size: 14px;
+        font-weight: 600;
+    }
+    .dropdown-arrow-icon::before {
+        width: 20px;
     }
 
     .navigation__item:nth-child(1) {
@@ -613,6 +538,11 @@ body {
     .search-button {
         background-color: #005dba;
         color: #fff;
+        padding: 12px;
+        
+    }
+    .search-button i {
+        margin: 0;
     }
 
     .search-placeholder-content {
@@ -620,13 +550,16 @@ body {
 
     }
 
+    .logo{
+        margin-top: 0px!important;
+    }
     .nav-link-placeholder {
         display: flex;
         border: 2px solid #000;
         background-color: #fff;
         outline: none;
         width: 100%;
-        margin:30px 0;
+        margin: 30px 0;
     }
 
     .nav-links {
@@ -637,14 +570,15 @@ body {
         align-items: flex-start;
         top: 45px;
         left: 0;
-        width: calc(100% - 60px);
+        /* width: calc(100% - 60px); */
+        width: 100%;
         height: calc(100vh - 42px);
         margin-left: 0;
         background: #fff;
         align-items: center;
-        margin: 0 30px;
+        padding: 0 30px;
     }
-
+   
     .nav-links-container {
         display: flex;
         justify-content: space-between;
@@ -660,8 +594,11 @@ body {
 
     .nav-link {
         color: #000;
+        font-weight: 800;
     }
-
+    .user__text{
+        font-weight: 800;
+    }
     .search {
         display: none;
     }
@@ -669,5 +606,23 @@ body {
     .logo {
 
         transform: scale(.8);
+    }
+
+    .drawer-content {
+        flex-direction: column;
+
+        .drawer-div {
+            width: 100%;
+        }
+
+        .drawer-div p br {
+            display: none;
+        }
+
+        .drawer-div p {
+            width: 100%;
+            max-width: 100%;
+
+        }
     }
 }

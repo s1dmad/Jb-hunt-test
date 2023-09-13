@@ -20,7 +20,8 @@
 </head>
 <body>
     <!-- Header  -->
-  <header class="header">
+  
+    <header class="header">
     <div class="header__left">
       <nav id="navigation-box" class="navigation">
         <ul class="navigation__list">
@@ -64,16 +65,19 @@
                     <i class="fa-solid fa-circle-info info-icon"></i>
                     
                 </div>
-            <select  class="dropdown">
-                <option selected>Order Number</option>
-                <option>Bill of Lading</option>
-                <option>Shipper ID</option>
-                <option>Seal Number</option>
-                <option>PO Number</option>
-                <option>Delivery Appointment Number</option>
-                <option>Pick Up Number</option>
-                <option>UTN</option>
-            </select>
+            <div class="dropdown">
+              <select class="custom-dropdown">
+                  <option selected>Order Number</option>
+                  <option>Bill of Lading</option>
+                  <option>Shipper ID</option>
+                  <option>Seal Number</option>
+                  <option>PO Number</option>
+                  <option>Delivery Appointment Number</option>
+                  <option>Pick Up Number</option>
+                  <option>UTN</option>
+              </select>
+              <div class="custom-arrow"></div>
+            </div>
             <form class="search-form">
                 <input type="text" placeholder="Order Number" class="search-input" id="secondSearchInput" />
                 <button type="submit" class="search-button">
@@ -102,7 +106,7 @@
         <div class="nav-links">
         <div class="nav-link-placeholder">
           <div class="search-placeholder-content">
-        <input type="text" placeholder="Search">
+        <input type="text" placeholder="Search...">
         <button type="submit" class="search-button">
         <i class="fa-solid fa-magnifying-glass"></i>
       </div>
@@ -112,17 +116,17 @@
         <div class="nav-links-container" id="shipment-solutions-link" style="display: flex;">
           <div  class="nav-link">SHIPMENT SOLUTIONS</div>
           <i id="dropdown-icon-shipment" class="fa-solid fa-angle-down dropdown-icon"></i>
-          <i class="fa-solid fa-arrow-right dropdown-arrow-icon"></i>
+          <i class="fa-solid fa-arrow-right-long dropdown-arrow-icon"></i>
         </div>
         <div class="nav-links-container" id="carrier-solutions-link" style="display: flex;"> 
           <div  class="nav-link">CARRIER SOLUTIONS</div>
           <i id="dropdown-icon-carrier" class="fa-solid fa-angle-down dropdown-icon"></i>
-          <i class="fa-solid fa-arrow-right dropdown-arrow-icon"></i>
+          <i class="fa-solid fa-arrow-right-long dropdown-arrow-icon"></i>
         </div>
         <div class="nav-links-container" id="our-company-link" style="display: flex;" >
           <div  class="nav-link">OUR COMPANY</div>
           <i id="dropdown-icon-company" class="fa-solid fa-angle-down dropdown-icon"></i>
-          <i class="fa-solid fa-arrow-right dropdown-arrow-icon"></i>
+          <i class="fa-solid fa-arrow-right-long dropdown-arrow-icon"></i>
         </div>
 
         <div class="userham">
@@ -138,13 +142,13 @@
           <i id="hamburger-close-icon" class="fa-solid fa-x" style="color: #ffffff;display:none;"></i>
         </div>
         <div class="search">
-          <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
-          <h1 class="search-text">SEARCH</h1>
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <h1 class="search-text">SEARCH ...</h1>
         </div>
       </div>
     </div>
        <button type="button" class="close-button" style="display: none;">
-      <i class="fa-solid fa-times"></i>
+      <i class="fa-solid fa-xmark"></i>
     </button>
     </div>
     <div id="shipment-dropdown" class="dropdown-drawer" style="display: none;">
@@ -153,7 +157,7 @@
                   <p>From a single shipment to the most <br> complex supply chain, our transportation <br> expertise and multimodal services can <br> make shipping freight simple.</p>
                   <div id="drawer-link-arrow-text" class="drawer-link">
                     Let's Connect
-                    <i class="fa-solid fa-arrow-right"></i>
+                    <i class="fa-solid fa-arrow-right-long"></i>
                   </div>
                 </div>
                 
@@ -179,7 +183,7 @@
               </div>
               <div class="drawer-div">
                   <div class="drawer-div-img-container">
-                    <img src="images/instant-quote.png" alt="" srcset="">
+                    <img src="instant-quote.png" alt="" srcset="">
                   </div>
               </div>
           </div>
@@ -218,7 +222,7 @@
               </div>
               <div class="drawer-div">
                   <div class="drawer-div-img-container">
-                    <img src="images/perks.png" alt="" srcset="">
+                    <img src="perks.png" alt="" srcset="">
                   </div>
               </div>
           </div>
@@ -259,22 +263,27 @@
               </div>
               <div class="drawer-div">
                   <div class="drawer-div-img-container">
-                    <img src="images/fountations.png" alt="" srcset="">
+                    <img src="fountations.png" alt="" srcset="">
                   </div>
               </div>
           </div>
 
     </div>
-    <div class="search-placeholder" style="display: none;">
-      <div class="search-placeholder-content">
-        <input type="text" placeholder="Search">
-        <button type="submit" class="search-button">
-        <i class="fa-solid fa-magnifying-glass"></i>
+    <div class="search-placeholder-container" style="display: none;">
+      <div class="search-placeholder-container-inner">
+        <div class="search-placeholder" >
+          <div class="search-placeholder-content">
+            <input type="text" placeholder="Search...">
+            <button type="submit" class="search-button">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          
+        </div>
       </div>
-      
     </div>
 
   </nav>
+
     <!-- Capacity Page -->
     <div class="hero-banner heroborder">
         <div class="hero-banner-container">
@@ -980,84 +989,86 @@
     </div>
     <!-- footer -->
 
-    <footer>   
-        <div class="footer-top">
-            <div class="footer-top-content-container">
-                <h1>SHIPMENT SOLUTIONS</h1>
-                <p>Shipper 360s</p>
-                <p>Get an Instant Quote</p>
-                <p>Dedicated Contract Services</p>
-                <p>Final Mile Services</p>
-                <p>Highway Services</p>
-                <p>Intermodal</p>
-                <p>International</p>
-                <p>Managed Logistics</p>
-            </div>
-            <div class="footer-top-content-container">
-                <h1>CARRIER SOLUTIONS</h1>
-                <p>Carrier 360</p>
-                <p>Become a Carrier</p>
-                <p>Load Board</p>
-                <p>Owner Operator</p>
-                <p>Small Fleet</p>
-                <p>Large Fleet</p>
-                <p>Home Delivery Carriers</p>
-                <p>Power Only Carriers</p>
-            </div>
-            <div class="footer-top-content-container">
-                <h1>OUR COMPANY</h1>
-                <p>Our Foundations</p>
-                <p>J.B. Hunt 360</p>
-                <p>J.B. Hunt Careers</p>
-                <p>Driving Jobs</p>
-                <p>Investor Relations</p>
-                <p>Corporate Responsibility</p>
-                <p>Case Studies</p>
-                <p>Newsroom</p>
-            </div>
-            <div class="footer-top-content-container">
-                <h1>RESOURCES</h1>
-                <p>Contact Us</p>
-                <p>Vendor Portal</p>
-                <p>Equipment Repair Request</p>
-                <p>Shipper 360™ Terms of Use</p>
-                <p>NVOCC Rules Tariff</p>
-                <p>SEC Filings</p>
-            </div>
-            <div class="footer-top-content-container">
-                <h1>CONNECT WITH US</h1>
-                <div class="social-media-container">
-                    <i class="fa-brands fa-square-facebook"></i>
-                    <i class="fa-brands fa-linkedin"></i>
-                    <i class="fa-brands fa-instagram"></i>
-                    <i class="fa-brands fa-x-twitter"></i>
-                    <i class="fa-brands fa-youtube"></i>
-                </div>
-                <div class="logo">
-                    <img class="logo" src="https://www.jbhunt.com/content/experience-fragments/jbhunt/footer/master/_jcr_content/root/main-par/footer_v2/footer_logo.coreimg.100.1024.png/1693242526895/logo.png" alt="" srcset="">
-                </div>
-                
-            </div>
-            
-
-
-        </div>
-        <div class="footer-bottom">
-            <div class="footer-bottom-content-container">
-                <div class="footer-bottom-content">
-                    <div class="copyright">
-                        <p>This site and all content is © 2023 J.B. Hunt Transport, Inc. The J.B. Hunt logo, content or images may not be used or reproduced by any means without express, written consent.</p>
+        <div class="footer">
+            <div class="footer-container">
+                <div class="footer-top">
+                    <div class="footer-top-content-container">
+                        <h1>SHIPMENT SOLUTIONS</h1>
+                        <p>Shipper 360s</p>
+                        <p>Get an Instant Quote</p>
+                        <p>Dedicated Contract Services</p>
+                        <p>Final Mile Services</p>
+                        <p>Highway Services</p>
+                        <p>Intermodal</p>
+                        <p>International</p>
+                        <p>Managed Logistics</p>
                     </div>
-                    <div class="policy">
-                        <h1>Privacy Policy</h1>
-                        <h1>California Privacy Policy</h1>
+                    <div class="footer-top-content-container">
+                        <h1>CARRIER SOLUTIONS</h1>
+                        <p>Carrier 360</p>
+                        <p>Become a Carrier</p>
+                        <p>Load Board</p>
+                        <p>Owner Operator</p>
+                        <p>Small Fleet</p>
+                        <p>Large Fleet</p>
+                        <p>Home Delivery Carriers</p>
+                        <p>Power Only Carriers</p>
                     </div>
+                    <div class="footer-top-content-container">
+                        <h1>OUR COMPANY</h1>
+                        <p>Our Foundations</p>
+                        <p>J.B. Hunt 360</p>
+                        <p>J.B. Hunt Careers</p>
+                        <p>Driving Jobs</p>
+                        <p>Investor Relations</p>
+                        <p>Corporate Responsibility</p>
+                        <p>Case Studies</p>
+                        <p>Newsroom</p>
+                    </div>
+                    <div class="footer-top-content-container">
+                        <h1>RESOURCES</h1>
+                        <p>Contact Us</p>
+                        <p>Vendor Portal</p>
+                        <p>Equipment Repair Request</p>
+                        <p>Shipper 360™ Terms of Use</p>
+                        <p>NVOCC Rules Tariff</p>
+                        <p>SEC Filings</p>
+                    </div>
+                    <div class="footer-top-content-container">
+                        <h1>CONNECT WITH US</h1>
+                        <div class="social-media-container">
+                            <i class="fa-brands fa-square-facebook"></i>
+                            <i class="fa-brands fa-linkedin"></i>
+                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-x-twitter"></i>
+                            <i class="fa-brands fa-youtube"></i>
+                        </div>
+                        <div class="logo">
+                            <img class="logo" src="https://www.jbhunt.com/content/experience-fragments/jbhunt/footer/master/_jcr_content/root/main-par/footer_v2/footer_logo.coreimg.100.1024.png/1693242526895/logo.png" alt="" srcset="">
+                        </div>
+                        
+                    </div>
+                    
+        
+        
+                </div>
+                <div class="footer-bottom">
+                    <div class="footer-bottom-content-container">
+                        <div class="footer-bottom-content">
+                            <div class="copyright">
+                                <p>This site and all content is © 2023 J.B. Hunt Transport, Inc. The J.B. Hunt logo, content or images may not be used or reproduced by any means without express, written consent.</p>
+                            </div>
+                            <div class="policy">
+                                <h1>Privacy Policy</h1>
+                                <h1>California Privacy Policy</h1>
+                            </div>
+                        </div>
+                    </div>
+        
                 </div>
             </div>
-
         </div>
 
-    </footer>
 </body>
 <script src="header.js"></script>
 <script src="capacity.js"></script>
