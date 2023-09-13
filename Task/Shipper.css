@@ -1,0 +1,590 @@
+@font-face {
+    font-family: "Proxima Nova";
+    src: url("font/Proxima Nova Font.otf") format("opentype");
+
+
+}
+@font-face {
+    font-family: "Custom font";
+    src: url("font/Fontspring-DEMO-proximanova-bold.otf") format("opentype"); 
+    
+}
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    
+}
+body {
+    font-family: "Proxima Nova", sans-serif;
+    /* width: 100%; */
+    /* margin: auto; */
+    /* padding-bottom: 58px; */
+    /* padding-top: 82px; */
+    /* max-width: 1600px; */
+    /* overflow-x: hidden; */
+}
+.main{
+    /* width: 100vw; */
+    padding: 0%;
+    margin: 0%;
+    /* width: 100%; */
+    /* width: 96vw; */
+    /* margin: 0%;
+    overflow-y: hidden; */
+}
+.main-class {
+    padding-bottom: 58px;
+    padding-top: 82px;
+    /* max-width: 1600px; */
+    margin: auto;
+    font-size: 55px;
+    display: flex;
+    flex-direction: column;
+    color: #211f20;
+    justify-content: center;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.tech-desktop {
+    padding: 1px;
+}
+
+.highlight {
+    font-family: 'Custom font';
+    position: relative;
+    font-weight: 900;
+    /* font-weight: bolder; */
+    font-style: normal;
+    letter-spacing: 0;
+}
+.highlight::after {
+    content: "";
+    position: absolute;
+    left: -30px;
+    right: 0;
+    bottom: 54%;
+    top: -35%;
+    background-color: #fedb00;
+    z-index: -1;
+}
+.lowlight {
+    margin: 0;
+    font-weight: 600;
+}
+
+.desc-para {
+    font-size: 20px;
+    text-align: center;
+    line-height: 30px;
+    padding: 1px 24rem 1px 24rem;
+    /* padding: 10px 16rem 6px 16rem; */
+}
+
+.button-box {
+    display: flex;
+    flex-direction: row;
+    width: max-content !important;
+    margin: 35px auto;
+    position: relative;
+    border-radius: 5px;
+    background: #fff;
+    border: 2px solid #1c52ad;
+}
+
+.toggle-btn {
+    font-family: "Proxima Nova";
+    padding: 14px 48px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+    text-align: center;
+    color: #6d7074;
+    letter-spacing: 1.22px;
+    line-height: 1.4;
+    font-size: 16px;
+    /* background: linear-gradient(90deg, #4852a8, #005dba); */
+    border-radius: 7px;
+    margin: 5px;
+    font-weight: 700;
+}
+.button-box .active{
+    color:white !important  ;
+    background: linear-gradient(90deg, #4852a8, #005dba) !important;
+}
+.toggle-btn-tm{
+    /* font-size: 12px; */
+    font-family: 'Proxima Nova';
+    font-weight: 100;
+}
+
+/* #btn {
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 48%;
+    height: 82%;
+    background: linear-gradient(90deg, #4852a8, #005dba);
+    color: #fff;
+    border-radius: 5px;
+    transition: 0.1s;
+    margin: 5px 0px 4px 3px;
+} */
+.buttons-toggle {
+    display: flex;
+    flex-direction: row;
+}
+
+.toggle-card {
+    position: relative;
+    /* width: 100%; */
+    height: 508px !important;
+}
+.toggle-card::after {
+    content: "";
+    /* height: auto; */
+    height: 545px;
+    position: absolute;
+    left: 20%;
+    right: 0;
+    top: -4.5em;
+    /* top: 0%; */
+    /* bottom: 0; */
+    bottom: -64px;
+    background-color: #f2f4f6;
+    z-index: -1;
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 10% 50%, 0 0);
+}
+
+.shipandcard {
+    display: flex;
+    flex-direction: column;
+}
+.carrier {
+    /* display: flex; */
+    /* flex-direction: row; */
+    position: relative;
+    top: 7rem;
+   justify-content: center;
+
+
+   left: -11rem;
+    
+}
+.shipper {
+    /* display: flex;    */
+    /* flex-direction: row; */
+    position: relative;
+    top: 2rem;
+    justify-content: center;
+
+    left: -11rem;
+}
+.carrier-image {
+    margin-top: -3rem;
+    /* margin-left: 11%; */
+}
+
+.carrier-header {
+    font-family: "Custom font";
+    /* display: flex; */
+    flex-direction: column;
+    line-height: 1.66666667em;
+    position: relative;
+    /* left: 3rem;
+    top: 3rem; */
+    left: 6rem;
+    top: 0rem;
+    color: #211f20;
+}
+.shipper-header {
+    font-family: "Custom font";
+    flex-direction: column;
+    line-height: 1.66666667em;
+    position: relative;
+    left: 5.5rem;
+    top: 2rem;
+    font-weight: 900;
+    color: #211f20;
+}
+.carrier-header-main {
+    font-size: 2.625rem;
+    letter-spacing: 1.26px;
+    line-height: 3.25rem;
+    font-weight: 900;
+    margin-bottom: 17px;
+
+}
+.carrier-header-list {
+    font-family: 'Proxima Nova';
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 2.1em;
+    list-style-type: none;
+}
+.carrier-header-list li .icon {
+    /* width: 20px;
+    height: 20px;
+    margin: 8px 6px 0px 6px; */
+
+
+
+    width: 16px;
+    height: 21px;
+    margin: 5px 5px -5px 6px;
+}
+.carrier {
+    display: none;
+}
+
+.toggle-btn1 {
+    position: relative;
+    right: 3rem;
+}
+.toggle-img{
+    width: 30rem;
+}
+.toggle-img1 {
+    width: 34rem !important;
+}
+
+
+.custom-button {
+    background: linear-gradient(90deg, #4852a8, #005dba);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    letter-spacing: 3.5px;
+    line-height: 1.4;
+    border-radius: 2px;
+    font-size: 0.875rem;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s;
+     transition-timing-function: cubic-bezier(.64, .04, .35, 1);
+}
+
+.custom-button::before,
+.custom-button::after {
+    background: linear-gradient(90deg, #211f20, #474747);
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    top: 0;
+    pointer-events: none;
+    transition: transform 0.4s;
+    transition-timing-function: cubic-bezier(.64, .04, .35, 1);
+}
+
+.custom-button::before {
+    left: 0;
+    top: 50%;
+    transform: translateX(-102%);
+}
+
+.custom-button::after {
+    right: 0;
+    bottom: 50%;
+    transform: translateX(102%);
+}
+
+.custom-button:hover::before,
+.custom-button:hover::after {
+    transform: translateX(0%);
+}
+
+
+
+
+
+.custom-button span {
+    position: relative;
+    z-index: 1;
+    background-color: transparent; /* Add a transparent background to the text container */
+    display: inline-block;
+}
+
+
+/* .linkmore:nth-of-type(1) {
+    font-family: 'Proxima Nova';
+    color: red;
+    font-size: .875rem;
+    text-decoration: underline;
+    letter-spacing: 3.5px;
+    line-height: 1.2142;
+
+}
+*/
+
+.linkmore {
+    font-family: 'Proxima Nova';
+    color: #664EA0;
+    font-size: .875rem;
+    text-decoration: underline;
+    letter-spacing: 3.5px;
+    line-height: 1.2142;
+
+}
+
+
+.link-btn{
+    color: #664ea0;
+}
+
+.customandlink {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+
+    margin: 2rem 1px 1px 0px;
+}
+
+/* @media (max-width: 325px) */
+@media (max-width: 320px) {
+    /* .shipper{
+        display: none;
+    } */
+    .main-class {
+        display: flex;
+        flex-direction: column;
+        font-size: 40px;
+        align-items: center;
+        justify-content: space-between;
+        padding: 6px 0px 8px 0px;
+        overflow-x: hidden;
+    }
+    .tech-desktop {
+        padding: 51px 15px 0px 15px;
+    }
+
+    .main-class span {
+        padding: 5px;
+    }
+    .desc-para {
+        text-align: center;
+        line-height: 30px;
+        padding: 16px;
+        margin-top: 1px;
+    }
+    .yellow-color {
+        content: "";
+        position: absolute;
+
+        background-color: #fedb00;
+        z-index: -1;
+    }
+.toggle-btn{
+    padding: 11px 25px;
+    width: 55%;
+}
+    .buttons-toggle {
+        display: flex;
+        flex-direction: column;
+    }
+    #btn {
+        width: 100%;
+        height: 50% ;
+        top: 0%;
+    }
+    .button-box{
+        width: 100% !important;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+    .toggle-card{
+        height: auto;
+    }
+    .toggle-card::after {
+        top: -13rem !important;
+        height: 55rem;
+    }
+    .carrier {
+        display: flex;
+        /* display: none; */
+        flex-direction: column;
+        position: relative ;
+        left: 8rem;
+    }
+    .shipper {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        left: -5rem;
+    }
+    .carrier-image {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .shipper-image {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .carrier-header {
+        position: relative;
+        left: -7rem;
+        /* width: 100%; */
+        width: fit-content;
+    }
+    .shipper-header {
+        position: relative;
+        left: 5rem;
+        /* width: 100%; */
+        width: fit-content;
+    }
+    .toggle-img1 {
+        /* width: 21rem !important;
+        position: relative; */
+        /* top: 5rem;
+        right: 10rem; */
+
+        /* top: -1rem;
+        right: -2rem; */
+    
+
+        width: 18rem !important;
+        position: relative;
+        top: -3rem;
+        right: 0rem;
+    }
+    .toggle-img {
+        /* width: 20rem;
+        position: relative;
+        left: 5rem; */
+
+        width: 18rem !important;
+        position: relative;
+        top: -3rem;
+        right: 0rem;
+    }
+    .carrier-header-main {
+        font-size: 36px;
+        font-weight: 800;
+        
+        
+        margin: auto;
+    }
+    .custom-button {
+        width: 19rem !important;
+        margin: 31px 0px 0px 1px;
+    }
+}
+
+@media screen and (min-width: 375px) and (max-width: 425px) {
+  /* Your CSS styles for screens between 375px and 425px go here */
+  .main-class{
+    /* padding: 10px 0px 0px 49px; */
+    /* margin: 10px 0px 1px 23px; */
+    /* overflow-x: hidden; */
+
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    align-items: center; */
+
+    margin-left: 5rem;
+    width: 94vw;
+
+  }
+ 
+
+  .toggle-card{
+    /* overflow-x: hidden; */
+    width: fit-content;
+    /* width: min-content; */
+  }
+  .button-box{
+    position: relative;
+    left: 2rem;
+  }
+  .toggle-img1{
+    width: 30rem !important;
+  }
+}
+
+
+@media (max-width: 1024px) {
+    .main-class {
+        font-size: 40px;
+         overflow-x: hidden;
+    }
+    .desc-para {
+        line-height: 30px;
+        padding: 31px;
+        margin-top: 2px;
+    }
+    .toggle-card{
+        
+    height: 860px !important;
+
+    }
+
+    .toggle-card::after {
+        top: -10rem;
+        left: 0;
+        clip-path: polygon(50% 4%, 100% 0, 100% 100%, 0 100%, 0 0);
+    }
+    .shipper {
+        display: flex;
+        flex-direction: column;
+        position: relative !important;
+        left: -5rem;
+    }
+    .carrier{
+        display: flex;
+        flex-direction: column;
+        position: relative !important;
+        left: -3rem ;
+    }
+    .customandlink {
+        flex-direction: column;
+    }
+    .signup-btn{
+        width: 100%;
+    }
+    .custom-button {
+        /* width: 100%; */
+        width: 96%;
+
+        margin: 31px 0px 0px 1px;
+    }
+    .carrier-header{
+        position: relative;
+        left: 47px
+    }
+
+
+    .toggle-card::after{
+        height: auto;
+    }
+    .shipper-image{
+        position: relative;
+        left: 4rem;
+
+
+        top: 3rem;
+    }
+    .carrier-image{
+        position: relative;
+        left: 2rem;
+    }
+}
+
+
+
+
+
+
+@media (width:2560px){
+    .shipper,.carrier{
+        right: 11rem;
+    }
+  
+ }

@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JB HUNT Test</title>
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="capacity.css">
+    <link rel="stylesheet" href="Shipper.css">
+    <link rel="stylesheet" href="component.css">
+    <link rel="stylesheet" href="test.css">
+    <link rel="stylesheet" href="news.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <script src="https://kit.fontawesome.com/e34c779ff2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.typekit.net/erw4idw.css">
+
+</head>
+<body>
+    <!-- Header  -->
+  <header class="header">
+    <div class="header__left">
+      <nav id="navigation-box" class="navigation">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <i class="fa-solid fa-calculator"></i>
+            <a href="#" class="navigation__link">Get a Quote</a>
+          </li>
+          <li class="navigation__item">
+            <i class="fa-solid fa-clipboard"></i>
+            <a href="#" class="navigation__link">Load Board</a>
+          </li>
+
+          <li class="navigation__item">
+            <i class="fa-solid fa-dolly fa-flip-horizontal"></i>
+            <a href="#" class="navigation__link" data-target="trackShipment">Track Shipment</a>
+          </li>
+          <li class="navigation__item">
+            <i class="fa-regular fa-message"></i>
+            <a href="#" class="navigation__link">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-section">
+                <div class="modal-section-heading">
+                    <p>Home Delivery</p>
+                    <i class="fa-solid fa-circle-info info-icon"></i>
+                </div>
+            <form class="search-form">
+                <input type="text" placeholder="Tracking Number" class="search-input" />
+                <button type="submit" class="search-button">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+            </div>
+            <div class="modal-section">
+                <div class="modal-section-heading" >
+                    <p>Business</p>
+                    <i class="fa-solid fa-circle-info info-icon"></i>
+                    
+                </div>
+            <select  class="dropdown">
+                <option selected>Order Number</option>
+                <option>Bill of Lading</option>
+                <option>Shipper ID</option>
+                <option>Seal Number</option>
+                <option>PO Number</option>
+                <option>Delivery Appointment Number</option>
+                <option>Pick Up Number</option>
+                <option>UTN</option>
+            </select>
+            <form class="search-form">
+                <input type="text" placeholder="Order Number" class="search-input" id="secondSearchInput" />
+                <button type="submit" class="search-button">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+            </div>
+        </div>
+    </div>
+    <div class="header__right">
+      <div class="user">
+        <i class="fa-solid fa-user user__icon"></i>
+        <span class="user__text">360 Login</span>
+      </div>
+      <button class="signup-button">360 Sign Up</button>
+    </div>
+    
+  </header>
+  <nav class="navbar">
+    <div class="navbar-top">
+      <div class="navbar-top-left">
+
+        <div class="logo">
+          <img src="https://www.jbhunt.com/content/experience-fragments/jbhunt/primary-nav/master/_jcr_content/root/main-par/header_v2/image.coreimg.png/1690569809618/jbh-logo-dark-bg.png" alt="JB Hunt Logo">
+        </div>
+        <div class="nav-links">
+        <div class="nav-link-placeholder">
+          <div class="search-placeholder-content">
+        <input type="text" placeholder="Search">
+        <button type="submit" class="search-button">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+        </div>
+        
+
+        <div class="nav-links-container" id="shipment-solutions-link" style="display: flex;">
+          <div  class="nav-link">SHIPMENT SOLUTIONS</div>
+          <i id="dropdown-icon-shipment" class="fa-solid fa-angle-down dropdown-icon"></i>
+          <i class="fa-solid fa-arrow-right dropdown-arrow-icon"></i>
+        </div>
+        <div class="nav-links-container" id="carrier-solutions-link" style="display: flex;"> 
+          <div  class="nav-link">CARRIER SOLUTIONS</div>
+          <i id="dropdown-icon-carrier" class="fa-solid fa-angle-down dropdown-icon"></i>
+          <i class="fa-solid fa-arrow-right dropdown-arrow-icon"></i>
+        </div>
+        <div class="nav-links-container" id="our-company-link" style="display: flex;" >
+          <div  class="nav-link">OUR COMPANY</div>
+          <i id="dropdown-icon-company" class="fa-solid fa-angle-down dropdown-icon"></i>
+          <i class="fa-solid fa-arrow-right dropdown-arrow-icon"></i>
+        </div>
+
+        <div class="userham">
+          <i class="fa-solid fa-user user__icon"></i>
+          <span class="user__text">360 Login</span>
+        </div>
+        </div>
+      </div>
+      <div class="navbar-top-right">
+        <div class="hamburger">
+          <p>360 Sign Up</p>
+          <i id="hamburger-icon" class="fa-solid fa-bars" style="color: #ffffff;"></i>
+          <i id="hamburger-close-icon" class="fa-solid fa-x" style="color: #ffffff;display:none;"></i>
+        </div>
+        <div class="search">
+          <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+          <h1 class="search-text">SEARCH</h1>
+        </div>
+      </div>
+    </div>
+       <button type="button" class="close-button" style="display: none;">
+      <i class="fa-solid fa-times"></i>
+    </button>
+    </div>
+    <div id="shipment-dropdown" class="dropdown-drawer" style="display: none;">
+           <div class="drawer-content">
+              <div class="drawer-div">
+                  <p>From a single shipment to the most <br> complex supply chain, our transportation <br> expertise and multimodal services can <br> make shipping freight simple.</p>
+                  <div id="drawer-link-arrow-text" class="drawer-link">
+                    Let's Connect
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </div>
+                </div>
+                
+                <div class="drawer-div">
+                  <h2>SHIPPING SOLUTIONS</h2>
+                  <ul>
+                    <li class="drawer-link" >Dedicated Contract Services</li>
+                    <li class="drawer-link" >Final Mile Services</li>
+                    <li class="drawer-link" >Highway Services</li>
+                    <li class="drawer-link" >Intermodal</li>
+                    <li class="drawer-link" >International</li>
+                    <li class="drawer-link" >Managed Logistics</li>
+                  </ul>
+                </div>
+              
+              <div class="drawer-div">
+                  <h2>CUSTOMER RESOURCES</h2>
+                  <ul>
+                    <li class="drawer-link" >Shipper 360</li>
+                    <li class="drawer-link" >Instant Quote</li>
+                    <li class="drawer-link" >Track Shipments</li>
+                  </ul>
+              </div>
+              <div class="drawer-div">
+                  <div class="drawer-div-img-container">
+                    <img src="images/instant-quote.png" alt="" srcset="">
+                  </div>
+              </div>
+          </div>
+
+    </div>
+    <div id="carrier-dropdown" class="dropdown-drawer" style="display: none;">
+           <div class="drawer-content">
+              <div class="drawer-div">
+                  <p>Find loads for owner-operators, fleets,<br> power only carriers and home delivery <br> carriers. J.B. Hunt 360 technology helps <br> you find the right load at the right time.</p>
+                  <div id="drawer-link-arrow-text" class="drawer-link">
+                    Explore Carrier Solutions
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </div>
+                </div>
+                
+                <div class="drawer-div">
+                  <h2>WHO WE SERVE</h2>
+                  <ul>
+                    <li class="drawer-link" >Owner/Operators</li>
+                    <li class="drawer-link" >Small Fleet</li>
+                    <li class="drawer-link" >Large Fleet</li>
+                    <li class="drawer-link" >Home Delivery Carriers</li>
+                    <li class="drawer-link" >Power Only Carriers</li>
+                  </ul>
+                </div>
+              
+              <div class="drawer-div">
+                  <h2>HOW WE HELP</h2>
+                  <ul>
+                    <li class="drawer-link" >Become a Carrier</li>
+                    <li class="drawer-link" >Carrier 360</li>
+                    <li class="drawer-link" >Carrier 360 Perks</li>
+                    <li class="drawer-link" >Payment Services</li>
+                    <li class="drawer-link" >Carrier Resources</li>
+                  </ul>
+              </div>
+              <div class="drawer-div">
+                  <div class="drawer-div-img-container">
+                    <img src="images/perks.png" alt="" srcset="">
+                  </div>
+              </div>
+          </div>
+
+    </div>
+    <div id="our-company-dropdown" class="dropdown-drawer" style="display: none;">
+           <div class="drawer-content">
+              <div class="drawer-div">
+                  <p>J.B. Hunt provides a variety of freight <br> transportation services to customers <br> throughout the United States, Canada and <br> Mexico.</p>
+                  <div id="drawer-link-arrow-text" class="drawer-link">
+                    Explore Our Company
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </div>
+                </div>
+                
+                <div class="drawer-div">
+                  <h2>ABOUT US</h2>
+                  <ul>
+                    <li class="drawer-link" >Our Foundations</li>
+                    <li class="drawer-link" >Newsroom</li>
+                    <li class="drawer-link" >Corporate Responsibility</li>
+                    <li class="drawer-link" >Read Our Blog</li>
+                    <li class="drawer-link" >Investor Relations</li>
+                    <li class="drawer-link" >Careers </li>
+                    <li class="drawer-link" >Case Studies</li>
+                    <li class="drawer-link" >Whitepapers</li>
+                  </ul>
+                </div>
+              
+              <div class="drawer-div">
+                  <h2>WHAT SETS US APART</h2>
+                  <ul>
+                    <li class="drawer-link" >Company Giving</li>
+                    <li class="drawer-link" >Our Technology</li>
+                    <li class="drawer-link" >Our Safety Culture</li>
+                    <li class="drawer-link" >Environmental Sustainability</li>
+                  </ul>
+              </div>
+              <div class="drawer-div">
+                  <div class="drawer-div-img-container">
+                    <img src="images/fountations.png" alt="" srcset="">
+                  </div>
+              </div>
+          </div>
+
+    </div>
+    <div class="search-placeholder" style="display: none;">
+      <div class="search-placeholder-content">
+        <input type="text" placeholder="Search">
+        <button type="submit" class="search-button">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+      
+    </div>
+
+  </nav>
+    <!-- Capacity Page -->
+    <div class="hero-banner heroborder">
+        <div class="hero-banner-container">
+            <picture class="hero-banner-background">
+                <img class="hero-banner-background-image" src="images/Map-Outline-Hero-633x422.png" alt="map">
+            </picture>
+            <div class="hero-banner-foreground">
+                <div class="hero-banner-foreground-text">
+                    <div class="hero-banner-headline">
+                        <div class="headline">
+                            <div class="title">
+                                <h1 class="title-text enter-up">
+                                    <b>Capacity</b>
+                                     to deliver. 
+                                
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-banner-text">
+                        <div class="description">
+                            <p>Our mission is <b>to create the most efficient transportation network in North America</b> so we can drive value for you and your business.</p>
+
+                        </div>
+                    </div>
+                    <div class="hero-banner-buttons">
+                        <div class="button1">
+                           <span class="btn1"> GET INSTANT QUOTE</span>
+                        </div>
+                        <div class="button2">
+                            <span class="btn2"> LET<span style="font-family: sans-serif;">'</span>S CONNECT </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-banner-foreground-media">
+                    <div class="hero-banner-image">
+                        <div class="cmp-image enter-up" >
+                            <div class="image-container">
+                                <img class="truck-img" src="images/truck.png" alt="truck">
+                            </div>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- Technology  -->
+
+    <div class="main">
+        <div class="main-class">
+            <div class="tech-desktop">
+                <div class="yellow-color"></div>
+                <span class="highlight">Technology</span>
+                <span class="lowlight">that</span>
+                <span class="lowlight">empowers.</span>
+            </div>
+            <div class="desc-para">
+                <p class="desc-para-text">
+                    Change the way you do business with the J.B. Hunt 360°® platform. We're eliminating inefficiencies by
+                    creating one place for you to manage every step of the transportation process.
+                </p>
+            </div>
+        </div>
+        <div class="form-box">
+            <div class="button-box">
+                <div class="button-main">
+                    <button type="button" class="toggle-btn active" id="top-btn" onclick="toggleButtonClick(this)">Shipper 360<span class="toggle-btn-tm">™</span></button>
+                    <button type="button" class="toggle-btn" id="bottom-btn" onclick="toggleButtonClick(this)">Carrier 360<span class="toggle-btn-tm">™</span></button>
+                </div>
+            </div>
+        </div>
+        <div class="toggle-card">
+            <div class="shipandcard">
+                <!-- carrier section -->
+                <div class="shipper" id="shipper">
+                    <div class="shipper-image">
+                        <img src="images\shipper-360-tab-image-resized-1.png" class="toggle-img" alt="" />
+                    </div>
+                    <div class="shipper-header"> 
+                        <h3 class="carrier-header-main">Shipper 360<span class="toggle-btn-tm">™</span></h3>
+                        <div class="carrier-header-list">
+                            <li><img src="images\list-icon.svg" class="icon" alt="" />Multimodal capacity options</li>
+                            <li><img src="images\list-icon.svg" class="icon" alt="" />Easily quote and book shipments</li>
+                            <li><img src="images\list-icon.svg" class="icon" alt="" />Access to nearly 1 million trucks</li>
+                            <li><img src="images\list-icon.svg" class="icon" alt="" />24/7 tracking</li>
+                            <li><img src="images\list-icon.svg" class="icon" alt="" />API and EDI integrations</li>
+                        </div>
+                        <div class="customandlink">
+                            <div class="signup-btn">
+                                <button class="custom-button">
+                                    <span onclick="alert('dd')"> SIGN UP TODAY
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="linkmore">
+                                <a class="link-btn">LEARN MORE</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- shipper section -->
+                <div class="carrier" id="carrier">
+                    <div class="carrier-image">
+                        <img src="images\carrier-360-tab-image-resized-1.png" class="toggle-img1" alt="" />
+                    </div>
+                    <div class="carrier-header">
+                        <div class="carrier-header-main">Carrier 360<span class="toggle-btn-tm">™</span></div>
+                        <div class="carrier-header-list">
+                            <li><img src="images\list-icon.svg" class="icon" alt="" />Free load board</li>
+                            <li><img src="images\list-icon.svg" class="icon" alt="" />Quick Pay</li>
+                            <li><img src="images\list-icon.svg" class="icon" alt="" />Personalized load recommendations</li>
+                            <li><img src="images\list-icon.svg" class="icon" alt="" />Visibility to shipper reviews</li>
+                            <li><img src="images\list-icon.svg" class="icon" alt="" />Robust rewards program</li>
+                        </div>
+                        <div class="customandlink">
+                            <div class="signup-btn">
+                                <button class="custom-button">
+                                    <span> SIGN UP TODAY </span>
+                                </button>
+                            </div>
+                            <div class="linkmore">
+                                <a class="link-btn">LEARN MORE</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+    </div>
+
+    <!--Shipping Freight  -->
+    <div class="teaserCarousel">
+        <div class="teaserCarousel-main-container">
+            <picture class="teaserCarousel-background">
+                <img src="images/Median-Arrows-for-Dark-Background.png" alt="arrow">
+            </picture>
+            <div class="teaserCarousel-container">
+                <div class="teaserCarousel-details">
+                    <div class="teaserCarousel-text">
+                        <div class="text">
+                            <h2>Shipping Freight</h2>
+                            <p>
+                                Our transportation expertise and multimodal services make shipping freight simple. With J.B. Hunt, you<span style="font-family: sans-serif;">'</span>ll get customized solutions that make sense for your business.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="teaserCarousel-button">
+                        <div class="button1">
+                            <span class="btn1"> SHIP WITH US</span>
+                         </div>
+                    </div>
+                </div>
+                <div class="teaserCarousel-CarouselMain">
+                    <div class="teaserCarousel-Carousel">
+                        <div class="teaserCarousel-teaserCont">
+                            <div class="teaserCarousel-body">
+                                <div class="teaser">
+                                    <div class="cmp-teaser">
+                                        <div class="cmp-teaser-media">
+                                            <div class="cmp-image">
+                                                <div class="cmp-image-container">
+                                                    <img src="images/3d-intermodal.png" alt="Container" class="cmp-image-image">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="cmp-teaser-content">
+                                            <div class="cmp-teaser-title">
+                                                <p>Intermodal</p>
+                                            </div>
+                                            <div class="cmp-teaser-cta-container">
+                                                <span class="cmp-teaser-button-text">Learn More</span>
+                                                <svg id="mySVG" class="hoverable" width="25px" height="12px" viewBox="0 0 25 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <title>Icon/Arrow Small</title>
+                                                    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                        <g id="Card/Blog-Mobile-1" transform="translate(-232.000000, -382.000000)" fill="#005DBA" fill-rule="nonzero">
+                                                            <g id="Icon/Arrow-Small">
+                                                                <g>
+                                                                    <g transform="translate(247.000000, 376.000000)">
+                                                                        <path d="M-2.25003755,23.9998856 C-2.09378816,23.9998856 -1.9531635,23.9373859 -1.82816356,23.812386 L2.81245038,19.1717721 C2.93745032,19.0467721 2.99994993,18.9061475 2.99994993,18.7498981 C2.99994993,18.5936487 2.93745032,18.453024 2.81245038,18.3280241 L2.43745127,17.953025 C2.31245133,17.828025 2.17182667,17.7655254 2.01557728,17.7655254 C1.85932789,17.7655254 1.73432795,17.828025 1.64057817,17.953025 L-1.40628956,20.9998927 L-1.40628956,1.1249401 C-1.40628956,0.812440604 -1.51566406,0.546816714 -1.73441378,0.328066997 C-1.9531635,0.10931728 -2.21878739,-5.72203224e-05 -2.53128688,-5.72203224e-05 C-2.84618264,0.0383822276 -3.0336822,0.147756967 -3.09378554,0.328066997 C-3.1586819,0.522756073 -3.1586819,0.975879992 -3.09378554,1.68743876 L-3.09378554,20.9998927 L-6.14065327,17.953025 C-6.23440305,17.828025 -6.35940299,17.7655254 -6.51565238,17.7655254 C-6.67190177,17.7655254 -6.81252643,17.828025 -6.93752638,17.953025 L-7.31252548,18.3280241 C-7.43752542,18.453024 -7.50002503,18.5936487 -7.50002503,18.7498981 C-7.50002503,18.9061475 -7.43752542,19.0467721 -7.31252548,19.1717721 L-2.67191155,23.812386 C-2.5469116,23.9373859 -2.40628694,23.9998856 -2.25003755,23.9998856 Z" id="Arrow/Small" transform="translate(-2.250038, 11.999914) rotate(-90.000000) translate(2.250038, -11.999914) "></path>
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </svg>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="teaser">
+                                    <div class="cmp-teaser">
+                                        <div class="cmp-teaser-media">
+                                            <div class="cmp-image">
+                                                <div class="cmp-image-container">
+                                                    <img src="images/3d-dcs.png" alt="Container" class="cmp-image-image">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="cmp-teaser-content">
+                                            <div class="cmp-teaser-title">
+                                                <p>Dedicated</p>
+                                            </div>
+                                            <div class="cmp-teaser-cta-container">
+                                                <span class="cmp-teaser-button-text">Learn More</span>
+                                                <svg id="mySVG" class="hoverable" width="25px" height="12px" viewBox="0 0 25 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <title>Icon/Arrow Small</title>
+                                                    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                        <g id="Card/Blog-Mobile-1" transform="translate(-232.000000, -382.000000)" fill="#005DBA" fill-rule="nonzero">
+                                                            <g id="Icon/Arrow-Small">
+                                                                <g>
+                                                                    <g transform="translate(247.000000, 376.000000)">
+                                                                        <path d="M-2.25003755,23.9998856 C-2.09378816,23.9998856 -1.9531635,23.9373859 -1.82816356,23.812386 L2.81245038,19.1717721 C2.93745032,19.0467721 2.99994993,18.9061475 2.99994993,18.7498981 C2.99994993,18.5936487 2.93745032,18.453024 2.81245038,18.3280241 L2.43745127,17.953025 C2.31245133,17.828025 2.17182667,17.7655254 2.01557728,17.7655254 C1.85932789,17.7655254 1.73432795,17.828025 1.64057817,17.953025 L-1.40628956,20.9998927 L-1.40628956,1.1249401 C-1.40628956,0.812440604 -1.51566406,0.546816714 -1.73441378,0.328066997 C-1.9531635,0.10931728 -2.21878739,-5.72203224e-05 -2.53128688,-5.72203224e-05 C-2.84618264,0.0383822276 -3.0336822,0.147756967 -3.09378554,0.328066997 C-3.1586819,0.522756073 -3.1586819,0.975879992 -3.09378554,1.68743876 L-3.09378554,20.9998927 L-6.14065327,17.953025 C-6.23440305,17.828025 -6.35940299,17.7655254 -6.51565238,17.7655254 C-6.67190177,17.7655254 -6.81252643,17.828025 -6.93752638,17.953025 L-7.31252548,18.3280241 C-7.43752542,18.453024 -7.50002503,18.5936487 -7.50002503,18.7498981 C-7.50002503,18.9061475 -7.43752542,19.0467721 -7.31252548,19.1717721 L-2.67191155,23.812386 C-2.5469116,23.9373859 -2.40628694,23.9998856 -2.25003755,23.9998856 Z" id="Arrow/Small" transform="translate(-2.250038, 11.999914) rotate(-90.000000) translate(2.250038, -11.999914) "></path>
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </svg>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="teaser">
+                                    <div class="cmp-teaser">
+                                        <div class="cmp-teaser-media">
+                                            <div class="cmp-image">
+                                                <div class="cmp-image-container">
+                                                    <img src="images/3d-truckload.png" alt="Container" class="cmp-image-image">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="cmp-teaser-content">
+                                            <div class="cmp-teaser-title">
+                                                <p>Truckload</p>
+                                            </div>
+                                            <div class="cmp-teaser-cta-container">
+                                                <span class="cmp-teaser-button-text">Learn More</span>
+                                                <svg id="mySVG" class="hoverable" width="25px" height="12px" viewBox="0 0 25 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <title>Icon/Arrow Small</title>
+                                                    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                        <g id="Card/Blog-Mobile-1" transform="translate(-232.000000, -382.000000)" fill="#005DBA" fill-rule="nonzero">
+                                                            <g id="Icon/Arrow-Small">
+                                                                <g>
+                                                                    <g transform="translate(247.000000, 376.000000)">
+                                                                        <path d="M-2.25003755,23.9998856 C-2.09378816,23.9998856 -1.9531635,23.9373859 -1.82816356,23.812386 L2.81245038,19.1717721 C2.93745032,19.0467721 2.99994993,18.9061475 2.99994993,18.7498981 C2.99994993,18.5936487 2.93745032,18.453024 2.81245038,18.3280241 L2.43745127,17.953025 C2.31245133,17.828025 2.17182667,17.7655254 2.01557728,17.7655254 C1.85932789,17.7655254 1.73432795,17.828025 1.64057817,17.953025 L-1.40628956,20.9998927 L-1.40628956,1.1249401 C-1.40628956,0.812440604 -1.51566406,0.546816714 -1.73441378,0.328066997 C-1.9531635,0.10931728 -2.21878739,-5.72203224e-05 -2.53128688,-5.72203224e-05 C-2.84618264,0.0383822276 -3.0336822,0.147756967 -3.09378554,0.328066997 C-3.1586819,0.522756073 -3.1586819,0.975879992 -3.09378554,1.68743876 L-3.09378554,20.9998927 L-6.14065327,17.953025 C-6.23440305,17.828025 -6.35940299,17.7655254 -6.51565238,17.7655254 C-6.67190177,17.7655254 -6.81252643,17.828025 -6.93752638,17.953025 L-7.31252548,18.3280241 C-7.43752542,18.453024 -7.50002503,18.5936487 -7.50002503,18.7498981 C-7.50002503,18.9061475 -7.43752542,19.0467721 -7.31252548,19.1717721 L-2.67191155,23.812386 C-2.5469116,23.9373859 -2.40628694,23.9998856 -2.25003755,23.9998856 Z" id="Arrow/Small" transform="translate(-2.250038, 11.999914) rotate(-90.000000) translate(2.250038, -11.999914) "></path>
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </svg>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="teaser">
+                                    <div class="cmp-teaser">
+                                        <div class="cmp-teaser-media">
+                                            <div class="cmp-image">
+                                                <div class="cmp-image-container">
+                                                    <img src="images/3d-lastmile.png" alt="Container" class="cmp-image-image">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="cmp-teaser-content">
+                                            <div class="cmp-teaser-title">
+                                                <p>Last Mile</p>
+                                            </div>
+                                            <div class="cmp-teaser-cta-container">
+                                                <span class="cmp-teaser-button-text">Learn More</span>
+                                                <svg id="mySVG" class="hoverable" width="25px" height="12px" viewBox="0 0 25 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <title>Icon/Arrow Small</title>
+                                                    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                        <g id="Card/Blog-Mobile-1" transform="translate(-232.000000, -382.000000)" fill="#005DBA" fill-rule="nonzero">
+                                                            <g id="Icon/Arrow-Small">
+                                                                <g>
+                                                                    <g transform="translate(247.000000, 376.000000)">
+                                                                        <path d="M-2.25003755,23.9998856 C-2.09378816,23.9998856 -1.9531635,23.9373859 -1.82816356,23.812386 L2.81245038,19.1717721 C2.93745032,19.0467721 2.99994993,18.9061475 2.99994993,18.7498981 C2.99994993,18.5936487 2.93745032,18.453024 2.81245038,18.3280241 L2.43745127,17.953025 C2.31245133,17.828025 2.17182667,17.7655254 2.01557728,17.7655254 C1.85932789,17.7655254 1.73432795,17.828025 1.64057817,17.953025 L-1.40628956,20.9998927 L-1.40628956,1.1249401 C-1.40628956,0.812440604 -1.51566406,0.546816714 -1.73441378,0.328066997 C-1.9531635,0.10931728 -2.21878739,-5.72203224e-05 -2.53128688,-5.72203224e-05 C-2.84618264,0.0383822276 -3.0336822,0.147756967 -3.09378554,0.328066997 C-3.1586819,0.522756073 -3.1586819,0.975879992 -3.09378554,1.68743876 L-3.09378554,20.9998927 L-6.14065327,17.953025 C-6.23440305,17.828025 -6.35940299,17.7655254 -6.51565238,17.7655254 C-6.67190177,17.7655254 -6.81252643,17.828025 -6.93752638,17.953025 L-7.31252548,18.3280241 C-7.43752542,18.453024 -7.50002503,18.5936487 -7.50002503,18.7498981 C-7.50002503,18.9061475 -7.43752542,19.0467721 -7.31252548,19.1717721 L-2.67191155,23.812386 C-2.5469116,23.9373859 -2.40628694,23.9998856 -2.25003755,23.9998856 Z" id="Arrow/Small" transform="translate(-2.250038, 11.999914) rotate(-90.000000) translate(2.250038, -11.999914) "></path>
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </svg>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="teaser">
+                                    <div class="cmp-teaser">
+                                        <div class="cmp-teaser-media">
+                                            <div class="cmp-image">
+                                                <div class="cmp-image-container">
+                                                    <img src="images/3d-fulfillment.png" alt="Container" class="cmp-image-image">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="cmp-teaser-content">
+                                            <div class="cmp-teaser-title">
+                                                <p>Fullfilment</p>
+                                            </div>
+                                            <div class="cmp-teaser-cta-container">
+                                                <span class="cmp-teaser-button-text">Learn More</span>
+                                                <svg id="mySVG" class="hoverable" width="25px" height="12px" viewBox="0 0 25 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <title>Icon/Arrow Small</title>
+                                                    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                        <g id="Card/Blog-Mobile-1" transform="translate(-232.000000, -382.000000)" fill="#005DBA" fill-rule="nonzero">
+                                                            <g id="Icon/Arrow-Small">
+                                                                <g>
+                                                                    <g transform="translate(247.000000, 376.000000)">
+                                                                        <path d="M-2.25003755,23.9998856 C-2.09378816,23.9998856 -1.9531635,23.9373859 -1.82816356,23.812386 L2.81245038,19.1717721 C2.93745032,19.0467721 2.99994993,18.9061475 2.99994993,18.7498981 C2.99994993,18.5936487 2.93745032,18.453024 2.81245038,18.3280241 L2.43745127,17.953025 C2.31245133,17.828025 2.17182667,17.7655254 2.01557728,17.7655254 C1.85932789,17.7655254 1.73432795,17.828025 1.64057817,17.953025 L-1.40628956,20.9998927 L-1.40628956,1.1249401 C-1.40628956,0.812440604 -1.51566406,0.546816714 -1.73441378,0.328066997 C-1.9531635,0.10931728 -2.21878739,-5.72203224e-05 -2.53128688,-5.72203224e-05 C-2.84618264,0.0383822276 -3.0336822,0.147756967 -3.09378554,0.328066997 C-3.1586819,0.522756073 -3.1586819,0.975879992 -3.09378554,1.68743876 L-3.09378554,20.9998927 L-6.14065327,17.953025 C-6.23440305,17.828025 -6.35940299,17.7655254 -6.51565238,17.7655254 C-6.67190177,17.7655254 -6.81252643,17.828025 -6.93752638,17.953025 L-7.31252548,18.3280241 C-7.43752542,18.453024 -7.50002503,18.5936487 -7.50002503,18.7498981 C-7.50002503,18.9061475 -7.43752542,19.0467721 -7.31252548,19.1717721 L-2.67191155,23.812386 C-2.5469116,23.9373859 -2.40628694,23.9998856 -2.25003755,23.9998856 Z" id="Arrow/Small" transform="translate(-2.250038, 11.999914) rotate(-90.000000) translate(2.250038, -11.999914) "></path>
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </svg>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="teaser">
+                                    <div class="cmp-teaser">
+                                        <div class="cmp-teaser-media">
+                                            <div class="cmp-image">
+                                                <div class="cmp-image-container">
+                                                    <img src="images/3d-ltl.png" alt="Container" class="cmp-image-image">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="cmp-teaser-content">
+                                            <div class="cmp-teaser-title">
+                                                <p>LTL</p>
+                                            </div>
+                                            <div class="cmp-teaser-cta-container">
+                                                <span class="cmp-teaser-button-text">Learn More</span>
+                                                <svg id="mySVG" class="hoverable" width="25px" height="12px" viewBox="0 0 25 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <title>Icon/Arrow Small</title>
+                                                    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                        <g id="Card/Blog-Mobile-1" transform="translate(-232.000000, -382.000000)" fill="#005DBA" fill-rule="nonzero">
+                                                            <g id="Icon/Arrow-Small">
+                                                                <g>
+                                                                    <g transform="translate(247.000000, 376.000000)">
+                                                                        <path d="M-2.25003755,23.9998856 C-2.09378816,23.9998856 -1.9531635,23.9373859 -1.82816356,23.812386 L2.81245038,19.1717721 C2.93745032,19.0467721 2.99994993,18.9061475 2.99994993,18.7498981 C2.99994993,18.5936487 2.93745032,18.453024 2.81245038,18.3280241 L2.43745127,17.953025 C2.31245133,17.828025 2.17182667,17.7655254 2.01557728,17.7655254 C1.85932789,17.7655254 1.73432795,17.828025 1.64057817,17.953025 L-1.40628956,20.9998927 L-1.40628956,1.1249401 C-1.40628956,0.812440604 -1.51566406,0.546816714 -1.73441378,0.328066997 C-1.9531635,0.10931728 -2.21878739,-5.72203224e-05 -2.53128688,-5.72203224e-05 C-2.84618264,0.0383822276 -3.0336822,0.147756967 -3.09378554,0.328066997 C-3.1586819,0.522756073 -3.1586819,0.975879992 -3.09378554,1.68743876 L-3.09378554,20.9998927 L-6.14065327,17.953025 C-6.23440305,17.828025 -6.35940299,17.7655254 -6.51565238,17.7655254 C-6.67190177,17.7655254 -6.81252643,17.828025 -6.93752638,17.953025 L-7.31252548,18.3280241 C-7.43752542,18.453024 -7.50002503,18.5936487 -7.50002503,18.7498981 C-7.50002503,18.9061475 -7.43752542,19.0467721 -7.31252548,19.1717721 L-2.67191155,23.812386 C-2.5469116,23.9373859 -2.40628694,23.9998856 -2.25003755,23.9998856 Z" id="Arrow/Small" transform="translate(-2.250038, 11.999914) rotate(-90.000000) translate(2.250038, -11.999914) "></path>
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </svg>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                              
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cmp-teaser-carousel-indicator">
+                        <button class="teaserCarousel-prev teaserCarousel-btn" id="prevButton">
+                            <svg width="26px" height="26px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 38 38" style="enable-background:new 0 0 38 38;" xml:space="preserve">
+                                <g id="Group_50888" transform="translate(-83 -2019)">
+                                     <path id="angles-left-solid_1_" style="fill:#005DBA;" class="st1" d="M98.09,2038l8.16-8.16c0.74-0.74,0.74-1.95-0.01-2.69c-0.74-0.74-1.94-0.74-2.68,0
+                                          l-9.5,9.5c-0.74,0.74-0.74,1.94,0,2.69l9.5,9.5c0.35,0.36,0.84,0.56,1.34,0.56c1.05,0,1.9-0.85,1.9-1.9c0-0.5-0.2-0.99-0.56-1.34
+                                          L98.09,2038z"></path>
+                                </g>
+                           </svg>
+                        </button>
+                        <ul class="teaser-carousel-dots">
+                            <li class="teaser-carousel-dot active"></li>
+                            <li class="teaser-carousel-dot"></li>
+                            <li class="teaser-carousel-dot"></li>
+                        </ul>
+                        <div class="teaser-carousel-count">
+                            <span>
+                                <span class="teaser-carousel-no">1 </span>
+                                <span style="font-family: sans-serif;">/</span>
+                                <span>6</span>
+                            </span>
+                        </div>
+                        <button class="teaserCarousel-next teaserCarousel-btn" id="nextButton">
+                            <svg width="26px" height="26px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 38 38" style="enable-background:new 0 0 38 38;" xml:space="preserve">
+                                <g id="Group_50888" transform="translate(-83 -2019)">
+                                     <path id="angles-left-solid_1_" style="fill:#005DBA;" class="st1" d="M98.09,2038l8.16-8.16c0.74-0.74,0.74-1.95-0.01-2.69c-0.74-0.74-1.94-0.74-2.68,0
+                                          l-9.5,9.5c-0.74,0.74-0.74,1.94,0,2.69l9.5,9.5c0.35,0.36,0.84,0.56,1.34,0.56c1.05,0,1.9-0.85,1.9-1.9c0-0.5-0.2-0.99-0.56-1.34
+                                          L98.09,2038z"></path>
+                                </g>
+                           </svg>
+                        </button> 
+                    </div>
+                  
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Careers -->
+    <div class="cmp-careers">
+        <div class="cmp-careers-containermain">
+            <div class="cmp-careers-container">
+                <div class="cmp-careers-details">
+                    <div class="cmp-careers-text">
+                        <div class="cmp-text">
+                            <h2>
+                                <b>People</b>
+                                you trust.
+                            </h2>
+                            <p style="text-align: center;">Since 1961, our people have set us apart and made us into the Fortune 300 company we are today. Learn why nearly 38,000 employees choose to work at J.B. Hunt.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cmp-careers-Jobcardmain">
+                        <div class="cmp-careers-jobcard">
+                            <div class="job-card-cont">
+                                <div class="job-card">
+                                    <div class="cmp-jobCard">
+                                        <div class="cmp-jobCard-container">
+                                            <div class="cmp-jobCard-details">
+                                                <p class="cmp-jobCard-subHeading">Keep us</p>
+                                                <p class="cmp-jobCard-heading">Moving</p>
+                                                <p class="cmp-jobCard-subHeading"></p>
+                                                <div class="cmp-jobCard-cta">
+                                                    Driving Jobs 
+                                                    <span>
+                                                        <svg class="hoverable" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25px" height="12px" viewBox="0 0 25 12" version="1.1">
+                                                            <g id="Symbols" stroke="none" stroke-width="1" fill-rule="evenodd">
+                                                                <g id="Card/Blog-Mobile-1" transform="translate(-232.000000, -382.000000)" fill-rule="nonzero">
+                                                                    <g id="Icon/Arrow-Small">
+                                                                        <g>
+                                                                            <g transform="translate(247.000000, 376.000000)">
+                                                                                <path d="M-2.25003755,23.9998856 C-2.09378816,23.9998856 -1.9531635,23.9373859 -1.82816356,23.812386 L2.81245038,19.1717721 C2.93745032,19.0467721 2.99994993,18.9061475 2.99994993,18.7498981 C2.99994993,18.5936487 2.93745032,18.453024 2.81245038,18.3280241 L2.43745127,17.953025 C2.31245133,17.828025 2.17182667,17.7655254 2.01557728,17.7655254 C1.85932789,17.7655254 1.73432795,17.828025 1.64057817,17.953025 L-1.40628956,20.9998927 L-1.40628956,1.1249401 C-1.40628956,0.812440604 -1.51566406,0.546816714 -1.73441378,0.328066997 C-1.9531635,0.10931728 -2.21878739,-5.72203224e-05 -2.53128688,-5.72203224e-05 C-2.84618264,0.0383822276 -3.0336822,0.147756967 -3.09378554,0.328066997 C-3.1586819,0.522756073 -3.1586819,0.975879992 -3.09378554,1.68743876 L-3.09378554,20.9998927 L-6.14065327,17.953025 C-6.23440305,17.828025 -6.35940299,17.7655254 -6.51565238,17.7655254 C-6.67190177,17.7655254 -6.81252643,17.828025 -6.93752638,17.953025 L-7.31252548,18.3280241 C-7.43752542,18.453024 -7.50002503,18.5936487 -7.50002503,18.7498981 C-7.50002503,18.9061475 -7.43752542,19.0467721 -7.31252548,19.1717721 L-2.67191155,23.812386 C-2.5469116,23.9373859 -2.40628694,23.9998856 -2.25003755,23.9998856 Z" id="Arrow/Small" transform="translate(-2.250038, 11.999914) rotate(-90.000000) translate(2.250038, -11.999914) "></path>
+                                                                            </g>
+                                                                        </g>
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </svg>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="cmp-jobCard-image">
+                                                <img src="images/JBH-Moving-Jobs.png" alt="Moving">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="job-card">
+                                    <div class="cmp-jobCard">
+                                        <div class="cmp-jobCard-container">
+                                            <div class="cmp-jobCard-details">
+                                                <p class="cmp-jobCard-subHeading">Keep us</p>
+                                                <p class="cmp-jobCard-heading">Innovating</p>
+                                                <p class="cmp-jobCard-subHeading"></p>
+                                                <div class="cmp-jobCard-cta">
+                                                    Office Jobs 
+                                                    <span>
+                                                        <svg class="hoverable" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25px" height="12px" viewBox="0 0 25 12" version="1.1">
+                                                            <g id="Symbols" stroke="none" stroke-width="1" fill-rule="evenodd">
+                                                                <g id="Card/Blog-Mobile-1" transform="translate(-232.000000, -382.000000)" fill-rule="nonzero">
+                                                                    <g id="Icon/Arrow-Small">
+                                                                        <g>
+                                                                            <g transform="translate(247.000000, 376.000000)">
+                                                                                <path d="M-2.25003755,23.9998856 C-2.09378816,23.9998856 -1.9531635,23.9373859 -1.82816356,23.812386 L2.81245038,19.1717721 C2.93745032,19.0467721 2.99994993,18.9061475 2.99994993,18.7498981 C2.99994993,18.5936487 2.93745032,18.453024 2.81245038,18.3280241 L2.43745127,17.953025 C2.31245133,17.828025 2.17182667,17.7655254 2.01557728,17.7655254 C1.85932789,17.7655254 1.73432795,17.828025 1.64057817,17.953025 L-1.40628956,20.9998927 L-1.40628956,1.1249401 C-1.40628956,0.812440604 -1.51566406,0.546816714 -1.73441378,0.328066997 C-1.9531635,0.10931728 -2.21878739,-5.72203224e-05 -2.53128688,-5.72203224e-05 C-2.84618264,0.0383822276 -3.0336822,0.147756967 -3.09378554,0.328066997 C-3.1586819,0.522756073 -3.1586819,0.975879992 -3.09378554,1.68743876 L-3.09378554,20.9998927 L-6.14065327,17.953025 C-6.23440305,17.828025 -6.35940299,17.7655254 -6.51565238,17.7655254 C-6.67190177,17.7655254 -6.81252643,17.828025 -6.93752638,17.953025 L-7.31252548,18.3280241 C-7.43752542,18.453024 -7.50002503,18.5936487 -7.50002503,18.7498981 C-7.50002503,18.9061475 -7.43752542,19.0467721 -7.31252548,19.1717721 L-2.67191155,23.812386 C-2.5469116,23.9373859 -2.40628694,23.9998856 -2.25003755,23.9998856 Z" id="Arrow/Small" transform="translate(-2.250038, 11.999914) rotate(-90.000000) translate(2.250038, -11.999914) "></path>
+                                                                            </g>
+                                                                        </g>
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </svg>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="cmp-jobCard-image">
+                                                <img src="images/JBH-Innovating-Jobs.png" alt="Moving">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="job-card">
+                                    <div class="cmp-jobCard">
+                                        <div class="cmp-jobCard-container">
+                                            <div class="cmp-jobCard-details">
+                                                <p class="cmp-jobCard-subHeading">Keep us</p>
+                                                <p class="cmp-jobCard-heading">Going</p>
+                                                <p class="cmp-jobCard-subHeading"></p>
+                                                <div class="cmp-jobCard-cta">
+                                                    Maintenance Jobs 
+                                                    <span>
+                                                        <svg class="hoverable" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25px" height="12px" viewBox="0 0 25 12" version="1.1">
+                                                            <g id="Symbols" stroke="none" stroke-width="1" fill-rule="evenodd">
+                                                                <g id="Card/Blog-Mobile-1" transform="translate(-232.000000, -382.000000)" fill-rule="nonzero">
+                                                                    <g id="Icon/Arrow-Small">
+                                                                        <g>
+                                                                            <g transform="translate(247.000000, 376.000000)">
+                                                                                <path d="M-2.25003755,23.9998856 C-2.09378816,23.9998856 -1.9531635,23.9373859 -1.82816356,23.812386 L2.81245038,19.1717721 C2.93745032,19.0467721 2.99994993,18.9061475 2.99994993,18.7498981 C2.99994993,18.5936487 2.93745032,18.453024 2.81245038,18.3280241 L2.43745127,17.953025 C2.31245133,17.828025 2.17182667,17.7655254 2.01557728,17.7655254 C1.85932789,17.7655254 1.73432795,17.828025 1.64057817,17.953025 L-1.40628956,20.9998927 L-1.40628956,1.1249401 C-1.40628956,0.812440604 -1.51566406,0.546816714 -1.73441378,0.328066997 C-1.9531635,0.10931728 -2.21878739,-5.72203224e-05 -2.53128688,-5.72203224e-05 C-2.84618264,0.0383822276 -3.0336822,0.147756967 -3.09378554,0.328066997 C-3.1586819,0.522756073 -3.1586819,0.975879992 -3.09378554,1.68743876 L-3.09378554,20.9998927 L-6.14065327,17.953025 C-6.23440305,17.828025 -6.35940299,17.7655254 -6.51565238,17.7655254 C-6.67190177,17.7655254 -6.81252643,17.828025 -6.93752638,17.953025 L-7.31252548,18.3280241 C-7.43752542,18.453024 -7.50002503,18.5936487 -7.50002503,18.7498981 C-7.50002503,18.9061475 -7.43752542,19.0467721 -7.31252548,19.1717721 L-2.67191155,23.812386 C-2.5469116,23.9373859 -2.40628694,23.9998856 -2.25003755,23.9998856 Z" id="Arrow/Small" transform="translate(-2.250038, 11.999914) rotate(-90.000000) translate(2.250038, -11.999914) "></path>
+                                                                            </g>
+                                                                        </g>
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </svg>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="cmp-jobCard-image">
+                                                <img src="images/JBH-Going-Jobs.png" alt="Moving">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div class="cmp-careers-icon">
+            <svg id="Median_Arrows_Dark" data-name="Median Arrows Dark" xmlns="http://www.w3.org/2000/svg" width="63.509" height="40" viewBox="0 0 63.509 40">
+                <defs>
+                  <style>
+                    .cls-1 {
+                      fill: #005dba;
+                    }
+              
+                    .cls-2 {
+                      fill: #fedb00;
+                    }
+                  </style>
+                </defs>
+                <g id="Group_939" data-name="Group 939">
+                  <path id="Path_1099" data-name="Path 1099" class="cls-1" d="M10.4,0H0L10.652,20,0,40H10.4L21.944,20Z"></path>
+                  <path id="Path_1100" data-name="Path 1100" class="cls-1" d="M60.765,0h-10.4L61.02,20,50.369,40h10.4L72.312,20Z" transform="translate(-29.586)"></path>
+                  <path id="Path_1101" data-name="Path 1101" class="cls-1" d="M111.134,0h-10.4l10.652,20L100.737,40h10.4l11.547-20Z" transform="translate(-59.172)"></path>
+                </g>
+                <g id="Group_940" data-name="Group 940">
+                  <path id="Path_1102" data-name="Path 1102" class="cls-2" d="M21.944,20,10.4,0H0Z"></path>
+                  <path id="Path_1103" data-name="Path 1103" class="cls-2" d="M72.312,20,60.765,0h-10.4Z" transform="translate(-29.586)"></path>
+                  <path id="Path_1104" data-name="Path 1104" class="cls-2" d="M122.681,20,111.134,0h-10.4Z" transform="translate(-59.172)"></path>
+                </g>
+              </svg>
+        </div>
+    </div>
+
+    <!-- Testimonial -->
+
+    <div class="main-diff">
+        <div class="main-diff-div">
+            <img src="images/testimonial_map (1).svg" class="main-diff-img-desktop" style="display: block;" alt="" />
+
+            <img src="images/testimonial_mobile(10).svg" class="main-diff-img-mobile"  style="display: none;" alt="" />
+
+            <div class="jbhunt-main">
+                <div class="icon">
+                    <svg
+                        class="svg-icon"
+                        version="1.1"
+                        id="Layer_1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        x="0px"
+                        y="0px"
+                        viewBox="0 0 48 47"
+                        style="enable-background: new 0 0 48 47"
+                        xml:space="preserve"
+                    >
+                        <path
+                            class="st0"
+                            style="fill: #e6e6e7"
+                            d="M45,0H3C1.34,0,0,1.34,0,3v41c0,1.66,1.34,3,3,3h42c1.66,0,3-1.34,3-3V3C48,1.34,46.66,0,45,0z M23.23,27.75
+                     c-0.07,2.65-2.25,4.75-4.9,4.74c-2.87-0.05-5.39-2.35-5.32-6.31c0.19-4.56,2.61-8.74,6.47-11.18l3.31,2.74
+                     c-2.26,1.25-3.98,3.28-4.86,5.71c0.39-0.14,0.81-0.19,1.22-0.16c2.29,0.03,4.12,1.91,4.09,4.19C23.24,27.57,23.23,27.66,23.23,27.75
+                     z M35.61,27.96c-0.05,2.66-2.24,4.78-4.9,4.74c-2.87-0.05-5.33-2.35-5.26-6.31c0.16-4.56,2.56-8.74,6.41-11.18l3.37,2.74
+                     c-1.97,1-4.33,3.53-4.86,5.71c0.39-0.14,0.81-0.19,1.22-0.16c2.28,0.06,4.08,1.95,4.03,4.23C35.62,27.81,35.61,27.88,35.61,27.96z"
+                        ></path>
+                    </svg>
+                </div>
+                <div class="jb-para">
+                    <p class="jb-hunt-main">The <b>J.B. Hunt </b>Difference</p>
+                </div>
+            </div>
+            <div class="jb-content">
+                <div class="jb-content1">
+                <ul class="jb-ul">
+                    "Technology in the global transportation space to me means real-time visibility and the 360
+                        Platform does a very nice job of providing that for me."                        
+                </ul>
+                <p class="jb-content-para">Larry Gorsich</p>
+                <p class="jb-content-para" id="jb-content-para1">
+                    Director of Global Transportation and Trade Compliance of Pure Fishing
+               </p>
+
+               <button class="custom-button">
+                <span>READ CASE STUDY</span>
+               </button>
+            </div>
+
+
+            <div class="jb-content2">
+                <ul class="jb-ul">
+                    "J.B. Hunt takes the time up front to really get to know our business, our pain points and then customize a tailored solution to meet those."                        
+                </ul>
+                <p class="jb-content-para">Mark Christie</p>
+               <p class="jb-content-para" id="jb-content-para2">
+                Chief Executive Officer of Bostwick Braun
+           </p>
+
+           <button class="custom-button">
+            <span>
+                WATCH VIDEO NOW
+            </span></button>
+            </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Newsroom -->
+
+    <div class="main-news">
+        <div class="main-container">
+            <div class="main-data">
+                <a class="main-jbhunt">
+                    <span class="main-jbhunt-yellow">J.B. Hunt</span>
+                    Newsroom
+                </a>
+                <div class="news-container">
+                    <a href="" class="news-items">
+                        <div class="image-wraper">
+                            <img src="images\jbh-sustainability-report.png" alt="" />
+                        </div>
+                        <h3 class="article-title">
+                            J.B. Hunt Showcases ESG Advancement in New 2022 Sustainability Report
+                        </h3>
+                        <p class="article-data">
+                            <span>August 09, 2023 / </span>
+                            <span>
+                                <span class="article-underline-data">environmental sustainability</span>
+                            </span>
+                        </p>
+                    </a>
+                    <div class="news-items">
+                        <div class="recent-news">Recent News</div>
+                        <a href="#" class="news-list">
+                            <div class="image-wraper" id="image-wraper1">
+                                <img src="images\JBHT_NikolaTrucks.jpeg" style="width: 100%; height: auto" alt="" />
+                            </div>
+                            <div class="content">
+                                <h3 class="article-title">J.B. Hunt to Purchase 13 Zero-Emission Nikola Trucks</h3>
+
+                                <div class="article-data">
+                                    <span>July 31 2023 /</span>
+                                    <span class="article-underline-data">electric</span><span>/</span>
+                                    <span
+                                        ><span class="article-underline-data">environmental sustainability</span
+                                        >/</span
+                                    >
+                                    <span><span class="article-underline-data">electric truck</span></span>
+                                </div>
+
+                               
+                            </div>
+                        </a>
+                        <a href="#" class="news-list">
+                            <div class="image-wraper" id="image-wraper2">
+                                <img
+                                    src="images\JB-Hunt-Corporate-Building-Flag-newsroom-thumbnail.jpg"
+                                    style="width: 100%; height: auto"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="content">
+                                <h3 class="article-title">J.B. Hunt Reports Earnings for the Second Quarter 2023</h3>
+
+
+
+                                <div class="article-data">
+                                    <span>July 18 2023/</span>
+                                    <span><span class="article-underline-data">Newsroom</span></span>
+                                </div>
+
+                            </div>
+                        </a>
+                        <div class="all-post-btn">
+                            <div class="all-btn" href="">
+                                <span>VIEW ALL POSTS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+
+    <footer>   
+        <div class="footer-top">
+            <div class="footer-top-content-container">
+                <h1>SHIPMENT SOLUTIONS</h1>
+                <p>Shipper 360s</p>
+                <p>Get an Instant Quote</p>
+                <p>Dedicated Contract Services</p>
+                <p>Final Mile Services</p>
+                <p>Highway Services</p>
+                <p>Intermodal</p>
+                <p>International</p>
+                <p>Managed Logistics</p>
+            </div>
+            <div class="footer-top-content-container">
+                <h1>CARRIER SOLUTIONS</h1>
+                <p>Carrier 360</p>
+                <p>Become a Carrier</p>
+                <p>Load Board</p>
+                <p>Owner Operator</p>
+                <p>Small Fleet</p>
+                <p>Large Fleet</p>
+                <p>Home Delivery Carriers</p>
+                <p>Power Only Carriers</p>
+            </div>
+            <div class="footer-top-content-container">
+                <h1>OUR COMPANY</h1>
+                <p>Our Foundations</p>
+                <p>J.B. Hunt 360</p>
+                <p>J.B. Hunt Careers</p>
+                <p>Driving Jobs</p>
+                <p>Investor Relations</p>
+                <p>Corporate Responsibility</p>
+                <p>Case Studies</p>
+                <p>Newsroom</p>
+            </div>
+            <div class="footer-top-content-container">
+                <h1>RESOURCES</h1>
+                <p>Contact Us</p>
+                <p>Vendor Portal</p>
+                <p>Equipment Repair Request</p>
+                <p>Shipper 360™ Terms of Use</p>
+                <p>NVOCC Rules Tariff</p>
+                <p>SEC Filings</p>
+            </div>
+            <div class="footer-top-content-container">
+                <h1>CONNECT WITH US</h1>
+                <div class="social-media-container">
+                    <i class="fa-brands fa-square-facebook"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-x-twitter"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+                <div class="logo">
+                    <img class="logo" src="https://www.jbhunt.com/content/experience-fragments/jbhunt/footer/master/_jcr_content/root/main-par/footer_v2/footer_logo.coreimg.100.1024.png/1693242526895/logo.png" alt="" srcset="">
+                </div>
+                
+            </div>
+            
+
+
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-content-container">
+                <div class="footer-bottom-content">
+                    <div class="copyright">
+                        <p>This site and all content is © 2023 J.B. Hunt Transport, Inc. The J.B. Hunt logo, content or images may not be used or reproduced by any means without express, written consent.</p>
+                    </div>
+                    <div class="policy">
+                        <h1>Privacy Policy</h1>
+                        <h1>California Privacy Policy</h1>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+</body>
+<script src="header.js"></script>
+<script src="capacity.js"></script>
+<script src="Shipper.js"></script>
+<script src="Component.js"></script>
+
+
+</html>

@@ -1,0 +1,371 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Proxima Nova Regular";
+    src: url("font/Fontspring-DEMO-proximanova-regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Proxima Nova Bold";
+    src: url("font/Fontspring-DEMO-proximanova-bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Proxima Nova ExBold";
+    src: url("font/Fontspring-DEMO-proximanova-extrabold.otf") format("opentype");
+}
+body{
+    color: #211f20;
+    text-rendering: optimizeLegibility;
+    font-family: Proxima Nova Regular,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body,html{
+    font-size: 16px;
+    line-height: 1.66666667em;
+}
+
+.hero-banner.heroborder{
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-banner.heroborder::before{
+    bottom: 10px;
+    background-color: #f2f4f6;
+    z-index: -2;
+}
+
+.hero-banner.heroborder::after{
+    bottom: 28px;
+    z-index: -1;
+    background-color: #e2e8f0;
+}
+
+.hero-banner.heroborder::after,
+.hero-banner.heroborder::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    clip-path: polygon(0 0,100% 0,105% 87%,50% 100%,0 88%);
+}
+
+.hero-banner.heroborder .hero-banner-container {
+    max-width: 1600px;
+    margin: auto;
+}
+
+.hero-banner-container{
+    position: relative;
+}
+
+.hero-banner.heroborder .hero-banner-background {
+    position: absolute;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 45%;
+    right: 0;
+    height: 100%;
+}
+
+.hero-banner-background-image {
+    max-width: none;
+    position: relative;
+}
+
+.hero-banner.heroborder .hero-banner-background img {
+    height: 420px;
+}
+
+.hero-banner-foreground{
+
+    display: flex;
+    position: relative;
+    z-index: 2;
+    margin-left: 9%;
+}
+
+.hero-banner-foreground-text{
+    min-width: 55%;
+    margin-top: 49px;
+    padding-right: 25px;
+}
+
+.hero-banner.heroborder .hero-banner-headline {
+    padding-bottom: 24px;
+}
+
+.title{
+    max-width: 1600px;
+    word-wrap: break-word;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.title-text{
+    font-size: 4.063rem;
+    line-height: 4.375rem;
+}
+
+h1 {
+    color: #211f20;
+    font-size: 2.875rem;
+    letter-spacing: 0;
+    line-height: 3.5rem;
+    font-weight: 600;
+    font-style: normal;
+    font-family: Proxima Nova Regular;
+}
+.hero-banner-headline .title-text b{
+    font-family: Proxima Nova ExBold;
+}
+.description{
+    color: #211f20;
+    font-size: 1.25rem;
+    letter-spacing: .3px;
+    line-height: 34px;
+    max-width: 1600px;
+    word-break: break-word;
+    font-family: Open Sans,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.description>p {
+    font-size: 20px;
+}
+
+.description b{
+    font-family: 'Proxima Nova Bold';
+    font-weight: 700;
+    font-style: normal;
+}
+
+.hero-banner-buttons{
+    display: flex;
+    margin-top: 24px;
+}
+
+
+.btn1{
+    font-size: .875rem;
+    letter-spacing: 3.5px;
+    line-height: 0;
+    font-family: Proxima Nova Regular,sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    position: relative;
+    z-index: 2;
+}
+
+
+.button1 {
+    position: relative;
+    display: inline-block;
+    background: linear-gradient(90deg, #4852a8, #005dba);
+    color: #fff;
+    padding: 8px 1.563rem 0px;
+    margin-right: 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    overflow: hidden;
+    border-radius: 2px;
+    height: 43.9844px;
+}
+
+.button1::before,
+.button1::after,
+.button2::before,
+.button2::after {
+    background: linear-gradient(90deg, #211f20, #474747);
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    top: 0;
+    pointer-events: none;
+    transition: transform 0.4s;
+    transition-timing-function: cubic-bezier(.64, .04, .35, 1);
+}
+
+.button1::before ,
+.button2::before{
+    left: 0;
+    top: 50%;
+    transform: translateX(-102%);
+}
+
+.button1::after,
+.button2::after {
+    right: 0;
+    bottom: 50%;
+    transform: translateX(102%);
+}
+
+.button1:hover::before,
+.button1:hover::after {
+    transform: translateX(0%);
+}
+
+.button2:hover::before,
+.button2:hover::after {
+    transform: translateX(0%);
+}
+.button2:hover{
+    color: #fff;
+    border-color: transparent; 
+}
+
+.button2{
+    padding: 7px 1.563rem 0px;
+    background: transparent;
+    color: #664ea0;
+    border: 2px solid #1c52ad;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    transition: border-color 0.6s ease-in-out; 
+    border-radius: 2px;
+    height: 43.9844px;
+}
+.btn2{
+    font-size: .875rem;
+    letter-spacing: 3.5px;
+    line-height: 0;
+    font-family: Proxima Nova Regular,sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-banner-foreground-media, .hero-banner-foreground-text {
+    width: 100%;
+}
+
+.hero-banner-image, .hero-banner-image>.image {
+    width: 100%;
+}
+
+.cmp-image {
+    max-width: 1460px;
+}
+
+.enter-up {
+    opacity: 0;
+    transition-property: opacity;
+    transition-delay: .25s;
+    transition-duration: .5s;
+    transition-timing-function: ease-in-out;
+}
+
+.imager-container{
+    display: inline-block;
+    max-width: 100%;
+    position: relative;
+}
+
+.hero-banner.heroborder .hero-banner-image .truck-img {
+    -o-object-fit: cover;
+    object-fit: cover;
+    max-width: 679px;
+    max-height: 440px;
+}
+
+.truck-img{
+    vertical-align: top;
+    width: auto;
+}
+
+
+@media (max-width: 1023px){
+
+    .hero-banner.heroborder{
+        padding-bottom: 200px;
+    }
+
+    .hero-banner.heroborder:before,
+    .hero-banner.heroborder::after {
+        clip-path: polygon(0 0,100% 0,100% 95%,50% 100%,0 95%);
+    }
+
+    .hero-banner.heroborder .hero-banner-background {
+        left: -64%;
+        right: 0;
+        bottom: -130px;
+        top: 20%;
+        height: auto;
+        width: 200%;
+        display: block;
+    }
+
+    .hero-banner.heroborder .hero-banner-background img {
+        width: 100%;
+    }
+
+    .hero-banner-foreground{
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .hero-banner-foreground-text{
+        padding: 0 30px;
+    }
+
+    .hero-banner-text{
+        padding-bottom: 5px;
+    }
+
+    .hero-banner.heroborder .hero-banner-buttons{
+        position: absolute;
+        bottom: -110px;
+        left: 0;
+        right: 0;
+        padding: 0 30px;
+        justify-content: center;
+        grid-gap: 20px;
+        gap: 20px;
+    }
+
+    .hero-banner.heroborder .hero-banner-image{
+        padding: 0 30px;
+    }
+    .hero-banner.heroborder .hero-banner-image .truck-img {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 500px){
+    .hero-banner-buttons{
+        flex-direction: column;
+    }
+
+    .button1{
+        margin: 0;
+        text-align: center;
+    }
+
+    .button2{
+        text-align: center;
+    }
+
+    .title-text{
+        font-size: 2.875rem;
+        line-height: 3.5rem;
+        letter-spacing: 0;
+    }
+}

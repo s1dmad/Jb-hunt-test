@@ -1,0 +1,259 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Reset default margins and paddings */
+body,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Global styles */
+body {
+    width: 100vw;
+    font-family: 'Proxima Nova', sans-serif;
+}
+
+/* Path: footer/footer.css */
+.footer {
+    background-color: #f5f5f5;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    font-family: 'Proxima Nova', sans-serif;
+    font-style: normal;
+}
+.footer-top{
+    width: calc(100% - 48px);
+    display: flex;
+    padding: 33px 24px;
+
+}
+.footer-top-content-container{
+    width: calc(100%/4);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.footer-top-content-container p{
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: .64px;
+    color: #005dba;
+    transition: all .3s ease 0s;
+}
+.footer-top-content-container h1 {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1.0px;
+    color: #000;
+    transition: all .3s ease 0s;
+}
+.footer-top-content-container p:hover{
+    color: #01376d;
+    cursor: pointer;
+}
+.social-media-container{
+    display: flex;
+    gap: 15px;
+    margin-left: -10px;
+    flex-wrap: wrap;
+}
+.social-media-container i{
+    font-size: 35px;
+    color: #000;
+    transition: all .3s ease 0s;
+}
+.logo{
+    width: 142px;
+    margin-top: 15px;
+}
+.footer-bottom{
+    width: 100%;
+    display: flex;
+    padding: 33px 0px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.footer-bottom-content-container{
+    display: flex;
+    border-top: 1px solid #000;
+    width: calc(100% - 48px);
+    justify-content: center;
+}
+.footer-bottom-content{
+    display: flex ;
+    flex-direction: row;
+    align-items: center;
+    margin: 30px 0px;
+    width: 100%;
+    justify-content: space-between;
+    gap: 15px;
+
+}
+.footer-bottom-content p{
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .52px;
+    color: #000;
+    flex-grow: 2;
+    transition: all .3s ease 0s;
+    line-height: 15px;
+    font-style: normal;
+   
+}
+.footer-bottom-content h1{
+    font-size: 15px;
+        font-weight: 600;
+        margin-right: 20px;
+        color: #005dba;
+        transition: all .3s ease 0s;
+        line-height: 20px;
+}
+.policy{
+    display: flex;
+    flex-direction: row;
+}
+@media only screen and (max-width:425px){
+    .footer-top{
+        flex-direction: column;
+        gap: 50px;
+    }
+    .footer-top-content-container{
+        width: 100%;
+    }
+    .footer-bottom-content{
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+    }
+}

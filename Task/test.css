@@ -1,0 +1,306 @@
+@font-face {
+    font-family: "Proxima Nova";
+    src: url("font/Proxima Nova Font.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Proxima Nova Regular";
+    src: url("font/Fontspring-DEMO-proximanova-black.otf") format("opentype");
+}
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+}
+body {
+    font-family: "Proxima Nova", sans-serif;
+
+    /* background-color: #f2f4f6; */
+    color: #211f20;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /* font-weight: 400; */
+    font-style: normal;
+}
+.main-diff {
+    width: 100%;
+
+    /* clip-path: polygon(0 0, 100% 0, 100% 88%, 50% 100%, 0 88%);
+    background-image: linear-gradient(110deg, #4852a8, #005dba); */
+    display: flex;
+    /* align-items: center; */
+    align-items: flex-end;
+    position: relative;
+}
+
+.main-diff::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    position: absolute;
+    clip-path: polygon(0 0, 100% 0, 100% 88%, 50% 100%, 0 88%);
+    background-image: linear-gradient(110deg, #4852a8, #005dba);
+    z-index: -1;
+}
+
+.main-diff::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    bottom: -20px;
+    position: absolute;
+    clip-path: polygon(0 0, 100% 0, 100% 88%, 50% 100%, 0 88%);
+
+    background-color: #f2f4f6;
+    z-index: -2;
+}
+
+.main-diff-div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    z-index: 2;
+
+    margin-bottom: -9rem;
+}
+.main-diff .img {
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    width: auto;
+}
+
+.main-diff-div img {
+    /* max-width: 100%; */
+    margin-right: 66%;
+    margin-top: -2rem;
+}
+/* .main-diff-img-desktop {
+    object-fit: cover;
+    margin-right: 63%;
+    margin-top: -15px;
+
+} */
+.jbhunt-main {
+    position: absolute;
+    display: flex;
+    gap: 1.4rem;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+    width: 100%;
+    margin: 44px 0px 42px 0px;
+}
+.jb-hunt-main {
+    font-family: "Proxima Nova";
+
+    text-align: center;
+    font-weight: 700;
+}
+.jb-hunt-main b {
+    font-family: "Proxima Nova Regular";
+    font-weight: 800;
+}
+.jbhunt-main::after {
+    content: "";
+    width: 100px;
+    height: 5px;
+    background-color: #fedb00;
+    display: block;
+    margin: 32px auto auto;
+}
+.svg-icon {
+    width: 16%;
+    margin: auto;
+    display: block;
+}
+.jb-para {
+    font-size: 52px;
+}
+
+.jb-content {
+    display: flex;
+    position: relative;
+    /* bottom: 20rem; */
+    bottom: 22rem;
+    text-align: center;
+    gap: 68px;
+    margin: 4px 4rem 1px 4rem;
+    line-height: 1.66666667em;
+    color: #ffffff;
+}
+.jb-content1,
+.jb-content2 {
+    text-align: initial;
+}
+.jb-content-para {
+    padding-bottom: 15px;
+    font-weight: 700;
+    line-height: 1.5625em;
+    font-size: 16px;
+}
+#jb-content-para1,
+#jb-content-para2 {
+    font-weight: 400;
+
+    /* width: 112%; */
+}
+.jb-ul {
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 700;
+    padding-bottom: 32px;
+}
+
+.custom-button {
+    background: hsl(52, 100%, 50%);
+    color: #211f20;
+    padding: 10px 20px;
+    border: none;
+    letter-spacing: 3.5px;
+    line-height: 1.4;
+    border-radius: 2px;
+    font-size: 0.875rem;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s;
+    transition-timing-function: cubic-bezier(0.64, 0.04, 0.35, 1);
+}
+
+.custom-button:hover span {
+    color: white;
+}
+
+.custom-button::before,
+.custom-button::after {
+    background: linear-gradient(90deg, #211f20, #474747);
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    top: 0;
+    pointer-events: none;
+    transition: transform 0.4s;
+    transition-timing-function: cubic-bezier(0.64, 0.04, 0.35, 1);
+}
+
+.custom-button::before {
+    left: 0;
+    top: 50%;
+    transform: translateX(-102%);
+}
+
+.custom-button::after {
+    right: 0;
+    bottom: 50%;
+    transform: translateX(102%);
+}
+
+.custom-button:hover::before,
+.custom-button:hover::after {
+    transform: translateX(0%);
+}
+
+.custom-button span {
+    position: relative;
+    z-index: 2;
+    background-color: transparent; /* Add a transparent background to the text container */
+    display: inline-block;
+    font-size: 0.875rem;
+    letter-spacing: 3.5px;
+    line-height: 1.2142;
+    font-weight: 500;
+}
+
+@media (max-width: 666px) {
+    .main-diff-div {
+        margin-bottom: 70px !important;
+    }
+    .main-diff-img-desktop {
+        display: none !important;
+    }
+    .main-diff-img-mobile {
+        display: block !important;
+        max-width: 100%;
+        height: 90%;
+        /* clip-path: rect(0 0 50px 100px); */
+    }
+
+    .main-diff-div img {
+        /* background-image: url("image/mobile-test-image.png"); */
+        height: 100%;
+        /* max-width: 100%;
+        margin-left: 5rem; */
+
+        max-width: 138% !important;
+        margin-top: 1px !important;
+        margin-left: 5rem !important;
+        margin-bottom: -5rem !important;
+    }
+    .jb-content {
+        bottom: unset;
+        margin: 3pc !important;
+        width: 80% !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .jb-content {
+        display: flex;
+        flex-direction: column;
+        margin: 32px;
+    }
+    .main-diff::before {
+        clip-path: polygon(0 0, 100% 0, 100% 95%, 50% 100%, 0 95%);
+    }
+    .main-diff::after {
+        clip-path: polygon(0 0, 100% 0, 100% 95%, 50% 100%, 0 95%);
+    }
+    /* .main-diff-img-desktop {
+        
+        width: 100%;
+        margin-right: 115%;
+        margin-top: -8%;
+        overflow-y: hidden;
+    } */
+    .svg-icon {
+        margin-bottom: 2rem;
+        width: 15%;
+    }
+    .jb-hunt-main {
+        width: 93vw;
+
+        font-size: 36px;
+    }
+    .custom-button {
+        width: 100%;
+    }
+    .main-diff-div img {
+        max-width: 48%;
+        margin-top: 1px;
+        margin-left: 6rem;
+        margin-bottom: 19rem;
+    }
+}
+
+@media (width: 2560px) {
+    .jb-content {
+        width: 50%;
+    }
+    /* .main-diff-img-desktop{
+    margin-right: 69%;
+   } */
+
+    .main-diff-div img {
+        margin-right: 69%;
+    }
+}
+
+/* Your existing CSS rules */
